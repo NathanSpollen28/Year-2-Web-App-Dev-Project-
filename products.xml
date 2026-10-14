@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product code="100-01">
+        <category>Clothes</category>
+        <name>Waterproof Jacket</name>
+        <description>Premium Quality Waterproof Jacket.</description>
+        <quantity>100</quantity>
+        <unitPrice currency="EUR">1200.00</unitPrice>
+    </product>
+
+    <product code="100-02">
+        <category>Clothes</category>
+        <name>Hiking Boots</name>
+        <description>Boots Perfect for the Trail.</description>
+        <quantity>10</quantity>
+        <unitPrice currency="EUR">250.00</unitPrice>
+    </product>
+
+    <product code="100-03">
+        <category>Clothes</category>
+        <name>Thermal Jumpsuit</name>
+        <description>Jumpsuit Perfect for Skiing, Hiking or Anything in Between.</description>
+        <quantity>3</quantity>
+        <unitPrice currency="EUR">300.00</unitPrice>
+    </product>
+    <product code="100-04">
+        <category>Clothes</category>
+        <name>Ski Mask</name>
+        <description>Mask For Skiing, Not for Stealing.</description>
+        <quantity>100</quantity>
+        <unitPrice currency="EUR">25.00</unitPrice>
+    </product>
+    <product code="101-05">
+        <category>Outdoor Gear</category>
+        <name>Tent</name>
+        <description>Large Tent Fitting up to 10 People.</description>
+        <quantity>10</quantity>
+        <unitPrice currency="EUR">2000.00</unitPrice>
+    </product>
+    <product code="101-06">
+        <category>Outdoor Gear</category>
+        <name>Gas Stove</name>
+        <description>Premium Gas Stove.</description>
+        <quantity>0</quantity>
+        <unitPrice currency="EUR">150.00</unitPrice>
+    </product>
+    <product code="101-07">
+        <category>Outdoor Gear</category>
+        <name>Water Purifier</name>
+        <description>Up to 100 Litres of Water Per Day.</description>
+        <quantity>2</quantity>
+        <unitPrice currency="EUR">300.00</unitPrice>
+    </product>
+    <product code="101-08">
+        <category>Outdoor Gear</category>
+        <name>Sleeping Bag</name>
+        <description>For All Your Sleeping Needs.</description>
+        <quantity>10</quantity>
+        <unitPrice currency="EUR">100.00</unitPrice>
+    </product>
+    <product code="101-09">
+        <category>Outdoor Gear</category>
+        <name>Blow Up Mattress</name>
+        <description>Perfect for Glamping</description>
+        <quantity>1</quantity>
+        <unitPrice currency="EUR">200.00</unitPrice>
+    </product>
+    <product code="102-10">
+        <category>Misc</category>
+        <name>Flares</name>
+        <description>Only for Emergencies</description>
+        <quantity>10</quantity>
+        <unitPrice currency="EUR">50.00</unitPrice>
+    </product>
+    <product code="102-11">
+        <category>Misc</category>
+        <name>Hand Warmers</name>
+        <description>To Keep Your Hands From Getting Cold!</description>
+        <quantity>17</quantity>
+        <unitPrice currency="EUR">25.00</unitPrice>
+    </product>
+    <product code="102-12">
+        <category>Misc</category>
+        <name>Fire Starters(Pack of 4)</name>
+        <description>Fire in an Instant</description>
+        <quantity>100</quantity>
+        <unitPrice currency="EUR">15.00</unitPrice>
+    </product>
+</products>
