@@ -19,7 +19,7 @@
     <product code="100-03">
         <category>Clothes</category>
         <name>Thermal Jumpsuit</name>
-        <description>Jumpsuit Perfect for Skiing, Hiking or Anything in Between.</description>
+        <description>Jumpsuit Perfect for Skiing,</description>
         <quantity>3</quantity>
         <unitPrice currency="EUR">300.00</unitPrice>
     </product>

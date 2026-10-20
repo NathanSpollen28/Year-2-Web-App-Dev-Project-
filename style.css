@@ -12,3 +12,42 @@
     font-family: 'Times New Roman', Times, serif;
 
 }
+
+
+.button-1 {
+    background-color:#2d5a27;
+    border-color:#2d5a27;
+    --bs-btn-hover-bg:#9caf88;
+    --bs-btn-hover-border-color:forestgreen;
+}
+.navbar{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #1f3d2b;
+    --bs-navbar-color:#9caf88;
+    --bs-navbar-hover-color:forestgreen; 
+    --bs-navbar-active-color:#5a7d3a;
+}
+.navbar-brand{
+    font-size: 25px;
+    color:#9caf88;
+    --bs-navbar-brand-hover-color:forestgreen;
+    
+}
+
+#cards-row{
+    margin-top:20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card,card-body{
+    background-color:whitesmoke;
+    color:#1f3d2b;
+    padding:10px;
+    
+}
+.card-subtitle{
+    color:#1f3d2b;
+
+}
