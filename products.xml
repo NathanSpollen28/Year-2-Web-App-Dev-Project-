@@ -19,14 +19,14 @@
     <product code="100-03">
         <category>Clothes</category>
         <name>Thermal Jumpsuit</name>
-        <description>Jumpsuit Perfect for Skiing,</description>
+        <description>Jumpsuit Perfect for Skiing.</description>
         <quantity>3</quantity>
         <unitPrice currency="EUR">300.00</unitPrice>
     </product>
     <product code="100-04">
         <category>Clothes</category>
         <name>Ski Mask</name>
-        <description>Mask For Skiing, Not for Stealing.</description>
+        <description>Mask For Skiing.</description>
         <quantity>100</quantity>
         <unitPrice currency="EUR">25.00</unitPrice>
     </product>
@@ -61,14 +61,14 @@
     <product code="101-09">
         <category>Outdoor Gear</category>
         <name>Blow Up Mattress</name>
-        <description>Perfect for Glamping</description>
+        <description>Perfect for Glamping.</description>
         <quantity>1</quantity>
         <unitPrice currency="EUR">200.00</unitPrice>
     </product>
     <product code="102-10">
         <category>Misc</category>
         <name>Flares</name>
-        <description>Only for Emergencies</description>
+        <description>Only for Emergencies.</description>
         <quantity>10</quantity>
         <unitPrice currency="EUR">50.00</unitPrice>
     </product>
@@ -81,8 +81,8 @@
     </product>
     <product code="102-12">
         <category>Misc</category>
-        <name>Fire Starters(Pack of 4)</name>
-        <description>Fire in an Instant</description>
+        <name>Fire Starters (Pack of 4)</name>
+        <description>Fire in an Instant.</description>
         <quantity>100</quantity>
         <unitPrice currency="EUR">15.00</unitPrice>
     </product>

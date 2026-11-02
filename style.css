@@ -41,13 +41,26 @@
     margin-bottom: 20px;
 }
 
-.card,card-body{
+.card{
     background-color:whitesmoke;
     color:#1f3d2b;
     padding:10px;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 .card-subtitle{
     color:#1f3d2b;
 
+}
+#result{
+    padding:10px;
+
+}
+#heading1{
+    padding: 10px;
+
+}
+
+.search-block{
+    margin-bottom:20px;
 }

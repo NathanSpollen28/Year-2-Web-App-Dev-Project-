@@ -24,23 +24,8 @@ async function loadXML(){ // getting the xml file
 }
 
 
-
-async function initialiseCards(){ //creating the cards 
-    const holdXML = await loadXML() //getting the xml file 
-    if(!holdXML){
-        console.error("No XML found")
-        return
-
-    }
-   const storeProduct =  holdXML.getElementsByTagName("product")
-   console.log(storeProduct.length)
-
-   const cardsRow = document.getElementById("cards-row") //targeting the cards row id from html 
-   console.log(cardsRow)
-
-   for(let i=0; i< storeProduct.length;i++){ //looping through the xml to find=== all products 
-        const product = (storeProduct[i])
-        const productCode = product.getAttribute("code")
+function displaySearchCard(product){
+     const productCode = product.getAttribute("code")
         const category = product.querySelector("category").textContent
         const name = product.querySelector("name").textContent
         const description = product.querySelector("description").textContent
@@ -58,7 +43,7 @@ async function initialiseCards(){ //creating the cards
         }
 
 
-        const col = document.createElement("div") //creating the type of elements 
+        const col = document.createElement("div") //creating elements  
         const card = document.createElement("div")
         const cardBody = document.createElement("div")
         const cardTitle = document.createElement("h5")
@@ -78,7 +63,7 @@ async function initialiseCards(){ //creating the cards
         cardSubtitle4.classList.add("card-subtitle","mb-2",)
         cardText.classList.add("card-text")
 
-        cardTitle.textContent = "Name: "+ name //labeling the text and taking the variables from the "textContent at the start of the loop"
+        cardTitle.textContent = "Name: "+ name //labeling the text
         cardSubtitle.textContent = "Category: "+ category
         cardSubtitle2.textContent = "Product Code: " +productCode
         cardSubtitle3.textContent = "Price: " +unitPrice.toFixed(2) + " " + readCurrency
@@ -94,19 +79,83 @@ async function initialiseCards(){ //creating the cards
        cardBody.appendChild(cardText)
        card.appendChild(cardBody)  
        col.appendChild(card)
-       cardsRow.appendChild(col) 
+       
+       return col
+
+
+}
+async function initialiseCards(){ //creating the cards 
+    const holdXML = await loadXML() //getting the xml file 
+    if(!holdXML){
+        console.error("No XML found")
+        return
+
+    }
+   const storeProduct =  holdXML.getElementsByTagName("product")
+   console.log(storeProduct.length)
+
+   const cardsRow = document.getElementById("cards-row") //targeting the cards row id from html 
+   console.log(cardsRow)
+
+   for(let i=0; i< storeProduct.length;i++){ //looping through the xml to find all products 
+        const product = (storeProduct[i])
+        
+    
+       cardsRow.appendChild(displaySearchCard(product))
        
         
        
         
 
 
-        console.log(productCode,category,name,description,quantity,unitPrice)
-        console.log(typeof unitPrice)
-        console.log(typeof quantity)
+       
 
     
    }
 
 }
+
+
 initialiseCards()
+
+//form time 
+
+const form = document.getElementById("mainForm")
+form.addEventListener("submit",async function(event){
+    event.preventDefault()
+    const productCodeInput = document.getElementById("productCode")
+    const userProductCodeInput = productCodeInput.value.trim()
+    const errorMsg = document.getElementById("result")
+    if(userProductCodeInput === ""){ //empty check 
+        errorMsg.textContent = "Error: No input. Valid format 100-01."
+        return
+    }
+    const codePattern = /^[0-9]{3}-[0-9]{2}$/ //format of code 
+    if(!codePattern.test(userProductCodeInput)){ //if not user input 
+        errorMsg.textContent = "Wrong format. Valid format 100-01."
+        return
+    }
+    errorMsg.textContent = ""//stops cards stacking 
+
+    const waitLoadXML = await loadXML()
+    if(!waitLoadXML){
+        errorMsg.textContent ="Products not loading."
+        console.error("XML not found")
+        return
+    }
+    const findProduct = waitLoadXML.querySelector('product[code ="'+ userProductCodeInput +'" ]')
+    if(findProduct === null){
+        errorMsg.textContent = "Your product code does not exist, please try again." 
+        return
+    }
+    errorMsg.appendChild(displaySearchCard(findProduct))
+
+
+    
+
+
+})
+
+
+
+
